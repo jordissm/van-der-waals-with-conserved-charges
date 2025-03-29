@@ -9,5 +9,5 @@ class Config:
     def load(self):
         with open(self.config_path) as f:
             data = yaml.safe_load(f)
-        self.external_cpp_app = Path(data["external_cpp_app"])
-        self.cpp_input_dir = Path(data["cpp_input_dir"])
+        self.thermal_fist_executable = Path(data["Thermal-FIST_executable"])
+        self.vdw_params_dir = Path(data["vdw_params_dir"])
