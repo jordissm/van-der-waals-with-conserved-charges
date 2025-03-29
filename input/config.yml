@@ -1,0 +1,2 @@
+Thermal-FIST_executable: /Applications/Thermal-FIST-stable/build/bin/examples/CalculationTmu
+vdw_params_dir: ./input/param_files
