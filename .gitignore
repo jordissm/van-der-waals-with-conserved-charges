@@ -1,0 +1,8 @@
+# Python cache
+**__pycache
+
+# Vim files
+**.un~
+
+# Cloud syncing
+.DS*
