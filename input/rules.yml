@@ -1,0 +1,17 @@
+rules:
+  # - condition:
+  #     B: 1
+  #   params:
+  #     a: 0.329
+  #     b: 3.42
+
+  # - condition:
+  #     B: 0
+  #     id_range: [1000, 2000]
+  #   params:
+  #     a: 0.5
+  #     b: 2.0
+
+  - default:
+      a: 0.0
+      b: 0.0
