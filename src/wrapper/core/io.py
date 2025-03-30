@@ -16,5 +16,5 @@ class HDF5Handler:
     def save_result(self, label: str, input_file: Path, result: str):
         grp = self.h5file.create_group(label)
         grp.create_dataset("input_file_name", data=input_file.name)
-        grp.create_dataset("input_content", data=input_file.read_text().encode('utf-8'))
+        # grp.create_dataset("input_content", data=input_file.read_text().encode('utf-8'))
         grp.create_dataset("output", data=result.encode('utf-8'))
