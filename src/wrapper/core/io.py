@@ -16,5 +16,12 @@ class HDF5Handler:
     def save_result(self, label: str, input_file: Path, result: str):
         grp = self.h5file.create_group(label)
         grp.create_dataset("input_file_name", data=input_file.name)
-        # grp.create_dataset("input_content", data=input_file.read_text().encode('utf-8'))
-        grp.create_dataset("output", data=result.encode('utf-8'))
+        # Filter out header, warning, and blank lines
+        cleaned_lines = []
+        for line in result.splitlines():
+            stripped_line = line.strip()
+            if not stripped_line or stripped_line.startswith('#') or stripped_line.startswith('**'):
+                continue
+            cleaned_lines.append(line)
+        cleaned_result = "\n".join(cleaned_lines)
+        grp.create_dataset("output", data=cleaned_result.encode('utf-8'))
