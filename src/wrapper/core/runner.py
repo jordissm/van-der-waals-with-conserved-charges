@@ -23,7 +23,7 @@ class CPPRunner:
                 h5.save_result(input_file.stem, input_file, result)
 
     def execute_thermal_fist(self, input_file: Path) -> str:
-        cmd = [str(self.thermal_fist_executable), '1', str(input_file), str(self.thermal_fist_particle_list_file)]
+        cmd = [str(self.thermal_fist_executable), str(input_file), str(self.thermal_fist_particle_list_file)]
         proc = subprocess.run(cmd, capture_output=True, text=True)
 
         if proc.returncode != 0:
