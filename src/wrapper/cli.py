@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from pathlib import Path
 from rich.console import Console
 from rich.traceback import install

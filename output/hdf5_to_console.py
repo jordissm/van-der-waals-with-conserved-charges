@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import h5py
 from pathlib import Path
 
